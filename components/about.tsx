@@ -32,7 +32,8 @@ export default function About() {
         for the joy it brings me. I enjoy the satisfaction of
         <span className="underline">
           {" "}
-          enhancing people's quality of life and boosting company productivity
+          enhancing people&apos;s quality of life and boosting company
+          productivity
         </span>{" "}
         through my programming expertise.I specialize in a diverse tech stack{" "}
         <span className="font-medium">
@@ -45,8 +46,9 @@ export default function About() {
       </p>
 
       <p>
-        When I'm not immersed in coding, I find joy in hitting the gym, playing
-        soccer, and taking my dog for long walks. I am also deeply fascinated{" "}
+        When I&apos;m not immersed in coding, I find joy in hitting the gym,
+        playing soccer, and taking my dog for long walks. I am also deeply
+        fascinated{" "}
         <span className="font-medium">
           about Artificial Intelligence, astronomy, and science fiction
         </span>

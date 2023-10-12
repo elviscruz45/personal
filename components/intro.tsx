@@ -62,7 +62,7 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Elvis.</span> I'm{" "}
+        <span className="font-bold">Hello, I&apos;m Elvis.</span> I&apos;m{" "}
         <span className="font-bold">Software developer</span> with{" "}
         <span className="font-bold"> 2 years </span>
         of experience. I enjoy building mobile and web apps using MERN stack. My
