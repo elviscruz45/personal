@@ -21,8 +21,8 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        After working as a{" "}
-        <span className="font-medium">Mechanical engineer</span> primarily
+        After working as a
+        <span className="font-medium"> Mechanical engineer</span> primarily
         working as a Data Engineer in large mining companies, where I
         extensively utilized spreadsheets and Python for various tasks, I made a
         pivotal decision to follow my passion for programming. My journey into

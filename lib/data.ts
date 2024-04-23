@@ -5,9 +5,10 @@ import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
-import aaaaaa from "@/public/aaaaaa.png";
+import projectmaintenance from "@/public/projectmaintenance.png";
+import webpageproject from "@/public/webpageproject.png";
 import teseo_mining from "@/public/teseo_mining.png";
-import pulley from "@/public/555.png";
+import projectbelts from "@/public/projectbelts.png";
 
 export const links = [
   {
@@ -69,7 +70,7 @@ export const experiencesData = [
     title: "Master's Degree in Computer Science - UTEC",
     location: "Lima, Peru",
     description:
-      "I initially focused on mastering programming primarily in Python, but I soon realized that JavaScript was better suited to my personal fulfillment when it came to developing solutions for Android and iOS devices.",
+      "Initially focused on mastering programming primarily in Python for Data Science. I soon realized that JavaScript was better suited to my personal fulfillment when it came to developing solutions for Android and iOS devices.",
     icon: React.createElement(LuGraduationCap),
     date: "2020 - 2022",
   },
@@ -89,7 +90,22 @@ export const projectsData = [
     description:
       "I worked as a Mobile developer on this startup project for 1 year. Mining companies can track every task and report it in real time.",
     tags: ["React Native", "Firebase", "Redux", "TypeScript"],
-    imageUrl: aaaaaa,
+    imageUrl: projectmaintenance,
+  },
+  {
+    title: "Finant",
+    description:
+      "I worked as a Web Developer for a startup project for 4 months. The website is located at www.finant.pe/inicio. The app is focused on helping students create their thesis to achieve their college degree more effectively.",
+    tags: [
+      "Next.js",
+      "clerk",
+      "openai",
+      "mongodb",
+      "express",
+      "Firebase",
+      "TypeScript",
+    ],
+    imageUrl: webpageproject,
   },
   {
     title: "Teseo Maintenance",
@@ -111,7 +127,7 @@ export const projectsData = [
       "SQL",
       "Express",
     ],
-    imageUrl: pulley,
+    imageUrl: projectbelts,
   },
 ] as const;
 
