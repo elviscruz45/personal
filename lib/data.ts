@@ -95,7 +95,7 @@ export const projectsData = [
   {
     title: "Finant",
     description:
-      "I worked as a Web Developer for a startup project for 4 months. The website is located at www.finant.pe/inicio. The app is focused on helping students create their thesis to achieve their college degree more effectively.",
+      "I worked as a Web Developer for a startup project for 4 months. The website is located at https://www.finant.pe  , the app is focused on helping students create their thesis to achieve their college degree more effectively.",
     tags: [
       "Next.js",
       "clerk",
