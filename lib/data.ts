@@ -66,8 +66,8 @@ export const experiencesData = [
     date: "2018-2020",
   },
   {
-    title: "Self-Taught Developer",
-    location: "Arequipa, Peru",
+    title: "Master's Degree in Computer Science - UTEC",
+    location: "Lima, Peru",
     description:
       "I initially focused on mastering programming primarily in Python, but I soon realized that JavaScript was better suited to my personal fulfillment when it came to developing solutions for Android and iOS devices.",
     icon: React.createElement(LuGraduationCap),
