@@ -67,7 +67,7 @@ export const experiencesData = [
     date: "2018-2020",
   },
   {
-    title: "Master's Degree in Computer Science - UTEC",
+    title: "Specialization in Computer Science - UTEC",
     location: "Lima, Peru",
     description:
       "Initially focused on mastering programming primarily in Python for Data Science. I soon realized that JavaScript was better suited to my personal fulfillment when it came to developing solutions for Android and iOS devices.",
