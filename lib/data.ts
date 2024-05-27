@@ -72,7 +72,7 @@ export const experiencesData = [
     description:
       "Initially focused on mastering programming primarily in Python for Data Science. I soon realized that JavaScript was better suited to my personal fulfillment when it came to developing solutions for Android and iOS devices.",
     icon: React.createElement(LuGraduationCap),
-    date: "2021 - 2022",
+    date: "2021 - 2021",
   },
   {
     title: "Teseo Software Company Developer",
