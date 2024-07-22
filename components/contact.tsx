@@ -90,7 +90,7 @@ export default function Contact() {
           maxLength={5000}
           onChange={handleInputChange}
         />
-        <SubmitBtn />
+        {/* <SubmitBtn /> */}
       </form>
     </motion.section>
   );
