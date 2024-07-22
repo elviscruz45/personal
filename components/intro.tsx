@@ -62,11 +62,12 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I&apos;m Elvis.</span> I&apos;m{" "}
-        <span className="font-bold">Software developer</span> with
-        <span className="font-bold"> 2 years </span>
-        of experience. I enjoy building mobile and web apps using MERN stack. My
-        focus is on <span className="font-bold">React Native and Next.js</span>
+        <span className="font-bold">Hello, I&apos;m Elvis.</span> I&apos;m a{" "}
+        <span className="font-bold">Software Engineer</span>{" "}
+        <span className="font-bold">
+          passionate about Machine Learning, generative AI and software
+          development.
+        </span>
       </motion.h1>
       <motion.div
         className="flex flex-col sm:flex-row
@@ -108,7 +109,7 @@ export default function Intro() {
         </a> */}
         <a
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://www.linkedin.com/in/elvis-ronald-cruz-chullo-8b68a110a/"
+          href="https://www.linkedin.com/in/elvis-cruz-chullo/"
           target="_blank"
         >
           <BsLinkedin />

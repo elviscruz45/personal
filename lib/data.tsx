@@ -16,12 +16,12 @@ export const links = [
     hash: "#home",
   },
   {
-    name: "About",
-    hash: "#about",
-  },
-  {
     name: "Blog",
     hash: "#blog",
+  },
+  {
+    name: "Video Blogs",
+    hash: "#vblog",
   },
   {
     name: "Projects",
@@ -35,10 +35,6 @@ export const links = [
     name: "Experience",
     hash: "#experience",
   },
-  {
-    name: "Contact",
-    hash: "#contact",
-  },
 ] as const;
 
 export const experiencesData = [
@@ -47,7 +43,7 @@ export const experiencesData = [
     location: "Arequipa, Peru",
     description:
       "I graduated with a specilalization of Maintenance Reliability where I learned Python to handle Equipment Maintenance Data.",
-    icon: React.createElement(LuGraduationCap),
+    icon: <LuGraduationCap />,
     date: "2013",
   },
   {
@@ -55,7 +51,7 @@ export const experiencesData = [
     location: "Arequipa, Peru",
     description:
       "I worked as a Data Analyst responsible for collecting data from equipment sensors and SCADA servers in the concentrator plant. I utilized Python to process and analyze this data, with the primary goal of assessing equipment reliability and optimizing maintenance strategies.",
-    icon: React.createElement(CgWorkAlt),
+    icon: <CgWorkAlt />,
     date: "2013-2017",
   },
   {
@@ -63,7 +59,7 @@ export const experiencesData = [
     location: "Lima, Peru",
     description:
       "I worked as an Equipment Sales Engineer, leveraging my skills in Python, Salesforce, and SAP to extract and analyze data. Through data analysis, I facilitated more informed recommendations for clients within the mining industry.",
-    icon: React.createElement(CgWorkAlt),
+    icon: <CgWorkAlt />,
     date: "2018-2020",
   },
   {
@@ -71,15 +67,15 @@ export const experiencesData = [
     location: "Lima, Peru",
     description:
       "Initially focused on mastering programming primarily in Python for Data Science. I soon realized that JavaScript was better suited to my personal fulfillment when it came to developing solutions for Android and iOS devices.",
-    icon: React.createElement(LuGraduationCap),
+    icon: <LuGraduationCap />,
     date: "2021 - 2021",
   },
   {
     title: "Teseo Software Company Developer",
     location: "Delaware, USA",
     description:
-      "I am currently employed as a full-stack developer at a startup that focuses on developing mobile applications to provide innovative solutions for the mining industry, addressing the challenges prevalent in the sector.",
-    icon: React.createElement(FaReact),
+      "I am currently employed as a full-stack developer at a startup specializing in mobile applications. Our focus is on providing innovative solutions for industry challenges, including the development of machine learning models, deep learning vision applications, and AI generative technologies.",
+    icon: <FaReact />,
     date: "2022 - present",
   },
 ] as const;
@@ -132,20 +128,17 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
+  "Python",
+  "Scikit-learn",
+  "Tensorflow",
+  "Keras",
+  "PyTorch",
+  "Django",
   "TypeScript",
   "React",
   "React Native",
   "Next.js",
   "Node.js",
-  "Github",
-  "Tailwind",
   "MongoDB",
-  "Redux",
-  "GraphQL",
   "Express",
-  "Python",
-  "Django",
 ] as const;

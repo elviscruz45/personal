@@ -4,16 +4,16 @@ import SectionHeading from "./section-heading";
 
 import { useSectionInView } from "@/lib/hooks";
 
-export default function Blogs() {
-  const { ref } = useSectionInView("Blog", 0.5);
+export default function VBlogs() {
+  const { ref } = useSectionInView("Video Blogs", 0.5);
 
   return (
     <section
-      id="blog"
+      id="vblog"
       ref={ref}
-      className="scroll-mt-28 justify-center text-center  sm:mb-0 space-x-10"
+      className=" scroll-mt-28 justify-center text-center  sm:mb-0 space-x-10"
     >
-      <SectionHeading>Blogs</SectionHeading>
+      <SectionHeading>Video Blogs</SectionHeading>
       <div
         // className="  justify-center text-center mb-28 sm:mb-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
         // "

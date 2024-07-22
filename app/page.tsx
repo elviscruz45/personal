@@ -6,6 +6,7 @@ import Projects from "@/components/projects";
 import SectionDivider from "@/components/section-divider";
 import Skills from "@/components/skills";
 import Blogs from "@/components/blogs";
+import VBlogs from "@/components/vblogs";
 import Image from "next/image";
 
 export default function Home() {
@@ -13,12 +14,14 @@ export default function Home() {
     <main className="flex flex-col items-center px-4">
       <Intro />
       <SectionDivider />
-      <About />
+      {/* <About /> */}
       <Blogs />
+
+      <VBlogs />
       <Projects />
       <Skills />
       <Experience />
-      <Contact />
+      {/*      <Contact /> */}
     </main>
   );
 }
