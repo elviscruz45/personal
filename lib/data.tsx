@@ -9,6 +9,8 @@ import projectmaintenance from "@/public/projectmaintenance.png";
 import webpageproject from "@/public/webpageproject.png";
 import teseo_mining from "@/public/teseo_mining.png";
 import projectbelts from "@/public/projectbelts.png";
+import unsupervised from "@/public/Unsupervised-Machine-Learning-Patterns-Social-and-Blog.jpg";
+import { StaticImageData } from "next/image";
 
 export const links = [
   {
@@ -36,7 +38,32 @@ export const links = [
     hash: "#experience",
   },
 ] as const;
-
+export const linksNavigation = [
+  {
+    name: "Home",
+    hash: "/#home",
+  },
+  {
+    name: "Blog",
+    hash: "/#blog",
+  },
+  {
+    name: "Video Blogs",
+    hash: "/#vblog",
+  },
+  {
+    name: "Projects",
+    hash: "/#projects",
+  },
+  {
+    name: "Skills",
+    hash: "/#skills",
+  },
+  {
+    name: "Experience",
+    hash: "/#experience",
+  },
+] as const;
 export const experiencesData = [
   {
     title: "Mechanical Engineer",
@@ -92,15 +119,7 @@ export const projectsData = [
     title: "Finant",
     description:
       "I worked as a Web Developer for a startup project for 4 months. The website is located at https://www.finant.pe  , the app is focused on helping students create their thesis to achieve their college degree more effectively.",
-    tags: [
-      "Next.js",
-      "clerk",
-      "openai",
-      "mongodb",
-      "express",
-      "Firebase",
-      "TypeScript",
-    ],
+    tags: ["Next.js", "openai", "mongodb", "express", "Firebase", "TypeScript"],
     imageUrl: webpageproject,
   },
   {
@@ -126,12 +145,25 @@ export const projectsData = [
     imageUrl: projectbelts,
   },
 ] as const;
+interface Blog {
+  title: string;
+  description: string;
+  imageUrl: string | StaticImageData; // Adjusted type
+}
+
+export const blogsData: Blog[] = [
+  {
+    title: "Machine Learning No supervised",
+    description:
+      "This article explores unsupervised machine learning, focusing on algorithms that find patterns in unlabeled data.",
+    imageUrl: unsupervised,
+  },
+] as const;
 
 export const skillsData = [
   "Python",
   "Scikit-learn",
   "Tensorflow",
-  "Keras",
   "PyTorch",
   "Django",
   "TypeScript",

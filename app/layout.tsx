@@ -81,7 +81,7 @@ export default function RootLayout({
         ></div>
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
-            <Header />
+            {/* <Header /> */}
             {children}
             <Footer />
             <Toaster position="top-right" />

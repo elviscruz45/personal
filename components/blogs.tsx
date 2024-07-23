@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import SectionHeading from "./section-heading";
+import { blogsData } from "@/lib/data";
+import Blog from "./blog";
 
 import { useSectionInView } from "@/lib/hooks";
 
@@ -20,86 +22,13 @@ export default function Blogs() {
         className="  justify-center text-center mb-28 sm:mb-40 grid grid-cols-1 
         "
       >
-        <div className="mt-28  mr-10">
-          <h1 className="text-l ">Coming soon...</h1>
+        <div>
+          {blogsData.map((project, index) => (
+            <React.Fragment key={index}>
+              <Blog {...project} />
+            </React.Fragment>
+          ))}
         </div>
-        {/* <div className="mt-28  mr-10">
-          <h1 className="text-xl ">Welcome to My YouTube Channel</h1>
-          <div className="">
-            <iframe
-              className=""
-              src={`https://www.youtube.com/embed/LLAZUTbc97I`}
-              title="YouTube Video Player"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-        <div className="mt-28  mr-10">
-          <h1 className="text-xl ">Welcome to My YouTube Channel</h1>
-          <div className="">
-            <iframe
-              className=""
-              src={`https://www.youtube.com/embed/LLAZUTbc97I`}
-              title="YouTube Video Player"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-        <div className="mt-28  mr-10">
-          <h1 className="text-xl ">Welcome to My YouTube Channel</h1>
-          <div className="">
-            <iframe
-              className=""
-              src={`https://www.youtube.com/embed/LLAZUTbc97I`}
-              title="YouTube Video Player"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-        <div className="mt-28  mr-10">
-          <h1 className="text-xl ">Welcome to My YouTube Channel</h1>
-          <div className="">
-            <iframe
-              className=""
-              src={`https://www.youtube.com/embed/LLAZUTbc97I`}
-              title="YouTube Video Player"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-        <div className="mt-28  mr-10">
-          <h1 className="text-xl ">Welcome to My YouTube Channel</h1>
-          <div className="">
-            <iframe
-              className=""
-              src={`https://www.youtube.com/embed/LLAZUTbc97I`}
-              title="YouTube Video Player"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-        <div className="mt-28  mr-10">
-          <h1 className="text-xl ">Welcome to My YouTube Channel</h1>
-          <div className="">
-            <iframe
-              className=""
-              src={`https://www.youtube.com/embed/LLAZUTbc97I`}
-              title="YouTube Video Player"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-        <div className="mt-28  mr-10">
-          <h1 className="text-xl ">Welcome to My YouTube Channel</h1>
-          <div className="">
-            <iframe
-              className=""
-              src={`https://www.youtube.com/embed/LLAZUTbc97I`}
-              title="YouTube Video Player"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div> */}
       </div>
     </section>
   );

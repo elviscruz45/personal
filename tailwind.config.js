@@ -5,8 +5,13 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  variants: {},
+
   theme: {
     extend: {
+      clipPath: {
+        triangle: "polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -14,6 +19,15 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        ".clip-triangle": {
+          clipPath: "polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%)",
+        },
+      };
+      addUtilities(newUtilities, ["responsive", "hover"]);
+    },
+  ],
   darkMode: "class",
 };
