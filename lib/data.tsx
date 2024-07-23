@@ -145,13 +145,8 @@ export const projectsData = [
     imageUrl: projectbelts,
   },
 ] as const;
-interface Blog {
-  title: string;
-  description: string;
-  imageUrl: string | StaticImageData; // Adjusted type
-}
 
-export const blogsData: Blog[] = [
+export const blogsData = [
   {
     title: "Machine Learning No supervised",
     description:
