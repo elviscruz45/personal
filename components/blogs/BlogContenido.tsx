@@ -68,12 +68,12 @@ export function BlogContenido({ postData }: any) {
         <div className="content mt-8">
           <h2 className="text-2xl font-semibold mb-4">What is Javascript?</h2>
           <p className="mb-4">
-            12345 2314 JavaScript is a scripting or programming language that
-            allows you to implement complex features on web pages — every time a
-            web page does more than sit there and display static information for
-            you to look at — displaying timely content updates, interactive
-            maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you
-            can bet that JavaScript is probably involved.
+            12345 2314 456 JavaScript is a scripting or programming language
+            that allows you to implement complex features on web pages — every
+            time a web page does more than sit there and display static
+            information for you to look at — displaying timely content updates,
+            interactive maps, animated 2D/3D graphics, scrolling video
+            jukeboxes, etc. — you can bet that JavaScript is probably involved.
           </p>
 
           <h2 className="text-2xl font-semibold mb-4">
