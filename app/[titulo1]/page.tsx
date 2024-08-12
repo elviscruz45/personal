@@ -6,20 +6,21 @@ import matter from "gray-matter";
 import HeaderLarge from "@/components/headerLarge";
 import Image from "next/image";
 import { BlogContenido } from "@/components/blogs/BlogContenido";
+import path from "path";
 
-// function getPostContent(slug: any) {
-//   const folder = "recipes/";
-//   const file = folder + `${slug}.md`;
+function getPostContent(slug: any) {
+  const folder = "recipes/";
+  const file = folder + `${slug}.md`;
 
-//   try {
-//     const content = fs.readFileSync(file, "utf8");
-//     const matterResult = matter(content);
-//     return matterResult;
-//   } catch (error) {
-//     console.error(`Error reading file ${file}:`, error);
-//     throw error; // Or handle it as appropriate
-//   }
-// }
+  try {
+    const content = fs.readFileSync(file, "utf8");
+    const matterResult = matter(content);
+    return matterResult;
+  } catch (error) {
+    console.error(`Error reading file ${file}:`, error);
+    throw error; // Or handle it as appropriate
+  }
+}
 
 // export const generateStaticParams = async () => {
 //   const posts = getPostMetadata("recipes");
@@ -35,11 +36,12 @@ import { BlogContenido } from "@/components/blogs/BlogContenido";
 
 export default function RecipePage(props: any) {
   const slug = props.params.titulo1;
-  // const post = getPostContent(slug);
+  const post = getPostContent(slug);
+  console.log("asdfgas", post);
 
-  const headdata = getPostMetadata("recipes");
-  // filter by the slug
-  const metadata = headdata.filter((post) => post.slug === slug)[0];
+  // const headdata = getPostMetadata("recipes");
+  // // filter by the slug
+  // const metadata = headdata.filter((post) => post.slug === slug)[0];
 
   return <BlogContenido />;
 
@@ -178,4 +180,28 @@ export default function RecipePage(props: any) {
 //     notFound();
 //   }
 //   return doc;
+// }
+
+// export async function getServerSideProps() {
+//   const folder = path.join(process.cwd(), "posts"); // Adjust the path to where your markdown files are located
+//   const files = fs.readdirSync(folder);
+//   const markdownPosts = files.filter((file) => file.endsWith(".md"));
+
+//   const posts = markdownPosts.map((filename) => {
+//     const fileContents = fs.readFileSync(path.join(folder, filename), "utf8");
+//     const matterResult = matter(fileContents);
+//     return {
+//       title: matterResult.data.title,
+//       time: matterResult.data.time,
+//       imageUrl: matterResult.data.imageUrl,
+//       description: matterResult.data.description,
+//       slug: filename.replace(".md", ""),
+//     };
+//   });
+
+//   return {
+//     props: {
+//       posts,
+//     },
+//   };
 // }
