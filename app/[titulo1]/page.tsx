@@ -7,14 +7,13 @@ import HeaderLarge from "@/components/headerLarge";
 import Image from "next/image";
 import { BlogContenido } from "@/components/blogs/BlogContenido";
 
-// function getPostContent(slug: any) {
-//   const folder = "recipes/";
-//   const file = folder + `${slug}.md`;
-//   const content = fs.readFileSync(file, "utf8");
-
-//   const matterResult = matter(content);
-//   return matterResult;
-// }
+function getPostContent(slug: any) {
+  const folder = "recipes/";
+  const file = folder + `${slug}.md`;
+  const content = fs.readFileSync(file, "utf8");
+  const matterResult = matter(content);
+  return matterResult;
+}
 
 // export const generateStaticParams = async () => {
 //   const posts = getPostMetadata("recipes");
@@ -29,12 +28,12 @@ import { BlogContenido } from "@/components/blogs/BlogContenido";
 // }
 
 export default function RecipePage(props: any) {
-  // const slug = props.params.titulo1;
-  // // const post = getPostContent(slug);
+  const slug = props.params.titulo1;
+  const post = getPostContent(slug);
 
-  // const headdata = getPostMetadata("recipes");
-  // // filter by the slug
-  // const metadata = headdata.filter((post) => post.slug === slug)[0];
+  const headdata = getPostMetadata("recipes");
+  // filter by the slug
+  const metadata = headdata.filter((post) => post.slug === slug)[0];
 
   return <BlogContenido />;
 
