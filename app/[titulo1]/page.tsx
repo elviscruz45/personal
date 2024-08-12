@@ -86,9 +86,7 @@ export default function RecipePage(props: any) {
             </div>
             <br />
           </div>
-          <article>
-            <Markdown>{post.content}</Markdown>
-          </article>
+          <article>{/* <Markdown>{post.content}</Markdown> */}</article>
         </main>
       </div>
     </>
