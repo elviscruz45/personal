@@ -7,7 +7,14 @@ import HeaderLarge from "@/components/headerLarge";
 import Image from "next/image";
 import { BlogContenido } from "@/components/blogs/BlogContenido";
 import path from "path";
-
+interface Post {
+  slug: string;
+  content: string;
+  time: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+}
 // This function generates the static params
 export async function generateStaticParams() {
   const postsDirectory = path.join(process.cwd(), "recipes");
@@ -32,15 +39,73 @@ export default async function RecipePage({
     const fileContents = fs.readFileSync(filePath, "utf8");
     const matterResult = matter(fileContents);
 
-    const post = {
+    const post: Post = {
       slug,
       content: matterResult.content,
-      ...matterResult.data,
+      time: matterResult.data.time || "default-time",
+      title: matterResult.data.title || "default-title",
+      description: matterResult.data.description || "default-description",
+      imageUrl: matterResult.data.imageUrl || "default-image-url",
     };
 
-    // console.log("Post data:", post);
-
-    return <BlogContenido />;
+    return (
+      <>
+        <div className="w-2/3 m-auto">
+          <main>
+            <HeaderLarge />
+            <div className="blog-detail-header">
+              <div className="flex flex-row justify-between mb-2">
+                <div className="flex items-center">
+                  <div className="flex-shrink-0">
+                    <a href="#">
+                      {/* <span className="sr-only">Elvis</span> */}
+                      <div className="relative h-10 w-10 !mb-0">
+                        <Image
+                          priority
+                          layout="fill"
+                          objectFit="cover"
+                          className="rounded-full"
+                          src="/images/ElvisProfile.jpeg"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                  </div>
+                  <div className="ml-3">
+                    <p className="text-sm font-medium !mb-0">
+                      <a href="#" className="hover:underline">
+                        Elvis Cruz Chullo
+                      </a>
+                    </p>
+                    <div className="flex space-x-1 text-sm ">
+                      <time dateTime={"2022-12-12"}>{post.time}</time>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex self-end">{/* Social Links Here */}</div>
+              </div>
+              <h1 className="font-bold text-4xl mb-1 ">{post.title}</h1>
+              <h2 className="blog-detail-header-subtitle mb-2 text-xl ">
+                {post.description}
+              </h2>
+              <div className="h-96 bg-black mx-auto w-full relative">
+                <Image
+                  priority
+                  layout="fill"
+                  objectFit="cover"
+                  src={post.imageUrl}
+                  alt=""
+                />
+              </div>
+              <br />
+            </div>
+            <article>
+              <Markdown>{post.content}</Markdown>{" "}
+            </article>
+          </main>
+        </div>
+      </>
+    );
   } catch (error) {
     console.error(`Error reading file ${filePath}:`, error);
     return <div>Recipe not found</div>;
