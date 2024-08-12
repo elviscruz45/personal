@@ -35,10 +35,10 @@ export const links = [
     name: "Blog",
     hash: "#blog",
   },
-  {
-    name: "Video Blogs",
-    hash: "#vblog",
-  },
+  // {
+  //   name: "Video Blogs",
+  //   hash: "#vblog",
+  // },
   {
     name: "Projects",
     hash: "#projects",
@@ -61,10 +61,10 @@ export const linksNavigation = [
     name: "Blog",
     hash: "/#blog",
   },
-  {
-    name: "Video Blogs",
-    hash: "/#vblog",
-  },
+  // {
+  //   name: "Video Blogs",
+  //   hash: "/#vblog",
+  // },
   {
     name: "Projects",
     hash: "/#projects",
