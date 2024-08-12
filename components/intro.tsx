@@ -64,11 +64,11 @@ export default function Intro() {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <span className="font-bold">Hello, I&apos;m Elvis.</span> I&apos;m a{" "}
+          <span className="font-bold">Hello, I&apos;m Elvis,</span> a{" "}
           <span className="font-bold">Software Engineer</span>{" "}
           <span className="font-bold">
-            passionate about Machine Learning, generative AI and software
-            development.
+            with a passion for revolutionizing technology through Machine
+            Learning and Generative AI.
           </span>
         </motion.h1>
         <motion.div
@@ -133,7 +133,7 @@ export default function Intro() {
 
           <a
             className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-            href="https://www.tiktok.com/@teseo_programacion"
+            href="https://www.tiktok.com/@elvis_programacion"
             target="_blank"
           >
             <FaTiktok />

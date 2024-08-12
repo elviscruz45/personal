@@ -25,7 +25,7 @@ export default function Home({ params }: any) {
         <VBlogs />
         <Projects />
         <Skills />
-        <Experience />
+        {/* <Experience /> */}
         {/*      <Contact /> */}
       </main>
     </>
