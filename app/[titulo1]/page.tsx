@@ -37,9 +37,9 @@ export default function RecipePage(props: any) {
   const slug = props.params.titulo1;
   // const post = getPostContent(slug);
 
-  // const headdata = getPostMetadata("recipes");
-  // // filter by the slug
-  // const metadata = headdata.filter((post) => post.slug === slug)[0];
+  const headdata = getPostMetadata("recipes");
+  // filter by the slug
+  const metadata = headdata.filter((post) => post.slug === slug)[0];
 
   return <BlogContenido />;
 
