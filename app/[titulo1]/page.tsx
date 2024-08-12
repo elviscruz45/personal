@@ -35,6 +35,8 @@ export default function RecipePage(props: any) {
   // filter by the slug
   const metadata = headdata.filter((post) => post.slug === slug)[0];
 
+  return <div>hola</div>;
+
   return (
     <>
       <div className="w-2/3 m-auto">
