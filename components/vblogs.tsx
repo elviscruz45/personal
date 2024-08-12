@@ -7,12 +7,12 @@ import VBlog from "./vblog";
 import { useSectionInView } from "@/lib/hooks";
 
 export default function VBlogs() {
-  const { ref } = useSectionInView("Video Blogs", 0.5);
+  // const { ref } = useSectionInView("Video Blogs", 0.5);
 
   return (
     <section
       id="vblog"
-      ref={ref}
+      // ref={ref}
       className="scroll-mt-28 justify-center text-center  sm:mb-0 space-x-10"
     >
       <SectionHeading>Video Blogs</SectionHeading>
