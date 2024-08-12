@@ -9,10 +9,14 @@ import Blogs from "@/components/blogs";
 import VBlogs from "@/components/vblogs";
 import Image from "next/image";
 import Header from "@/components/header";
+import getPostMetadata from "@/lib/getPostMetadata";
 
 export default function Home({ params }: any) {
   const sectionName = params;
-  console.log("hcooodsfjasf", sectionName);
+
+  const postMetadata = getPostMetadata("recipes");
+
+  const blogs = postMetadata;
   return (
     <>
       <Header />
@@ -20,9 +24,9 @@ export default function Home({ params }: any) {
         <Intro />
         <SectionDivider />
         {/* <About /> */}
-        <Blogs />
+        <Blogs blogs={blogs} />
 
-        <VBlogs />
+        {/* <VBlogs /> */}
         <Projects />
         <Skills />
         {/* <Experience /> */}

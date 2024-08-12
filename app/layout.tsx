@@ -83,6 +83,7 @@ export default function RootLayout({
           <ActiveSectionContextProvider>
             {/* <Header /> */}
             {children}
+            <br />
             <Footer />
             <Toaster position="top-right" />
             <ThemeSwitch />

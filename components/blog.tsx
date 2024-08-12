@@ -18,11 +18,14 @@ export default function Blog({ title, description, imageUrl }: BlogsProps) {
     target: ref,
     offset: ["0 1", "1.33 1"],
   });
+
+  const titleModify = title.replaceAll(" ", "_");
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  //    <Link href={`/blog?article=${encodeURIComponent(title)}`}>
 
   return (
-    <Link href={`/blog?article=${encodeURIComponent(title)}`}>
+    <Link href={`/${titleModify}`}>
       <motion.div
         ref={ref}
         style={{
@@ -56,6 +59,8 @@ export default function Blog({ title, description, imageUrl }: BlogsProps) {
             src={imageUrl}
             alt="Project I worked on"
             quality={95}
+            width={200}
+            height={100}
             className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
         transition 
         group-hover:scale-[1.04]

@@ -11,6 +11,20 @@ import teseo_mining from "@/public/teseo_mining.png";
 import projectbelts from "@/public/projectbelts.png";
 import unsupervised from "@/public/Unsupervised-Machine-Learning-Patterns-Social-and-Blog.jpg";
 import { StaticImageData } from "next/image";
+// import markdownContent from "@/content/blogs/nft-marketplace-in-react-js-next-typescript-full-guide.md";
+import { content } from "@/content/blogs/unsupervisedMachinelearning";
+import { time } from "console";
+
+export const blogsData = [
+  {
+    title: "Machine Learning No supervised",
+    time: "2022-12-12",
+    description:
+      "This article explores unsupervised machine learning, focusing on algorithms that find patterns in unlabeled data.",
+    imageUrl: unsupervised,
+    markdown: content,
+  },
+] as const;
 
 export const links = [
   {
@@ -143,15 +157,6 @@ export const projectsData = [
       "Express",
     ],
     imageUrl: projectbelts,
-  },
-] as const;
-
-export const blogsData = [
-  {
-    title: "Machine Learning No supervised",
-    description:
-      "This article explores unsupervised machine learning, focusing on algorithms that find patterns in unlabeled data.",
-    imageUrl: unsupervised,
   },
 ] as const;
 

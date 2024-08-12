@@ -6,8 +6,10 @@ import Blog from "./blog";
 
 import { useSectionInView } from "@/lib/hooks";
 
-export default function Blogs() {
+export default function Blogs({ blogs }: any) {
   const { ref } = useSectionInView("Blog", 0.5);
+
+  console.log("comoestas", blogs);
 
   return (
     <section
@@ -22,13 +24,23 @@ export default function Blogs() {
         className="  justify-center text-center mb-28 sm:mb-40 grid grid-cols-1 
         "
       >
-        <div>
-          {blogsData.map((project, index) => (
+        {
+          <div>
+            {blogs.map((project: any, index: number) => (
+              <React.Fragment key={index}>
+                <Blog {...project} />
+              </React.Fragment>
+            ))}
+          </div>
+        }
+
+        {/* <div>
+          {blogs.map((project, index) => (
             <React.Fragment key={index}>
               <Blog {...project} />
             </React.Fragment>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
