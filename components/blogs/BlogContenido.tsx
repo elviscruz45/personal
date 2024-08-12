@@ -4,7 +4,7 @@ import { useRef, useEffect, useState } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useParams, useSearchParams } from "next/navigation";
+// import { useParams, useSearchParams } from "next/navigation";
 import { blogsData } from "@/lib/data";
 import unsupervised from "@/public/Unsupervised-Machine-Learning-Patterns-Social-and-Blog.jpg";
 import Markdown from "react-markdown";
@@ -13,9 +13,9 @@ import html from "remark-html";
 import remarkGfm from "remark-gfm";
 
 export function BlogContenido({ postData }: any) {
-  const params = useSearchParams();
-  const title = params.get("article");
-  const article = blogsData.filter((blog) => blog.title === title)[0];
+  // const params = useSearchParams();
+  // const title = params.get("article");
+  // const article = blogsData.filter((blog) => blog.title === title)[0];
 
   return (
     <>
