@@ -5,6 +5,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import HeaderLarge from "@/components/headerLarge";
 import Image from "next/image";
+import { BlogContenido } from "@/components/blogs/BlogContenido";
 
 function getPostContent(slug: any) {
   const folder = "recipes/";
@@ -35,7 +36,7 @@ export default function RecipePage(props: any) {
   // filter by the slug
   const metadata = headdata.filter((post) => post.slug === slug)[0];
 
-  return <div>hola</div>;
+  return <BlogContenido />;
 
   return (
     <>

@@ -44,24 +44,24 @@ export function BlogContenido({ postData }: any) {
                 </a>
               </p>
               <div className="flex space-x-1 text-sm ">
-                <time dateTime={"2022-12-12"}>{article.time}</time>
+                {/* <time dateTime={"2022-12-12"}>{article.time}</time> */}
               </div>
             </div>
           </div>
           <div className="flex self-end">{/* Social Links Here */}</div>
         </div>
-        <h1 className="font-bold text-4xl mb-1">{article.title}</h1>
-        <h2 className="blog-detail-header-subtitle mb-2 text-xl ">
+        {/* <h1 className="font-bold text-4xl mb-1">{article.title}</h1> */}
+        {/* <h2 className="blog-detail-header-subtitle mb-2 text-xl ">
           {article.description}
-        </h2>
+        </h2> */}
         <div className="h-96 bg-black mx-auto w-full relative">
-          <Image
+          {/* <Image
             priority
             layout="fill"
             objectFit="cover"
             src={article.imageUrl}
             alt=""
-          />
+          /> */}
         </div>
       </div>
       <article className="prose lg:prose-lg markdown-image-50 mx-auto">
