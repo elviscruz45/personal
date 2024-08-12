@@ -59,10 +59,10 @@ export const linksNavigation = [
     name: "Skills",
     hash: "/#skills",
   },
-  {
-    name: "Experience",
-    hash: "/#experience",
-  },
+  // {
+  //   name: "Experience",
+  //   hash: "/#experience",
+  // },
 ] as const;
 export const experiencesData = [
   {
