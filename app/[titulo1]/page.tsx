@@ -10,9 +10,15 @@ import { BlogContenido } from "@/components/blogs/BlogContenido";
 function getPostContent(slug: any) {
   const folder = "recipes/";
   const file = folder + `${slug}.md`;
-  const content = fs.readFileSync(file, "utf8");
-  const matterResult = matter(content);
-  return matterResult;
+
+  try {
+    const content = fs.readFileSync(file, "utf8");
+    const matterResult = matter(content);
+    return matterResult;
+  } catch (error) {
+    console.error(`Error reading file ${file}:`, error);
+    throw error; // Or handle it as appropriate
+  }
 }
 
 // export const generateStaticParams = async () => {
