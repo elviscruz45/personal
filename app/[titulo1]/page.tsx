@@ -36,60 +36,62 @@ export default function RecipePage(props: any) {
   const metadata = headdata.filter((post) => post.slug === slug)[0];
 
   return (
-    <div className="w-2/3 m-auto">
-      <main>
-        <HeaderLarge />
-        <div className="blog-detail-header">
-          <div className="flex flex-row justify-between mb-2">
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
-                <a href="#">
-                  {/* <span className="sr-only">Elvis</span> */}
-                  <div className="relative h-10 w-10 !mb-0">
-                    <Image
-                      priority
-                      layout="fill"
-                      objectFit="cover"
-                      className="rounded-full"
-                      src="/images/ElvisProfile.jpeg"
-                      alt=""
-                    />
-                  </div>
-                </a>
-              </div>
-              <div className="ml-3">
-                <p className="text-sm font-medium !mb-0">
-                  <a href="#" className="hover:underline">
-                    Elvis Cruz Chullo
+    <>
+      <div className="w-2/3 m-auto">
+        <main>
+          <HeaderLarge />
+          <div className="blog-detail-header">
+            <div className="flex flex-row justify-between mb-2">
+              <div className="flex items-center">
+                <div className="flex-shrink-0">
+                  <a href="#">
+                    {/* <span className="sr-only">Elvis</span> */}
+                    <div className="relative h-10 w-10 !mb-0">
+                      <Image
+                        priority
+                        layout="fill"
+                        objectFit="cover"
+                        className="rounded-full"
+                        src="/images/ElvisProfile.jpeg"
+                        alt=""
+                      />
+                    </div>
                   </a>
-                </p>
-                <div className="flex space-x-1 text-sm ">
-                  <time dateTime={"2022-12-12"}>{metadata.time}</time>
+                </div>
+                <div className="ml-3">
+                  <p className="text-sm font-medium !mb-0">
+                    <a href="#" className="hover:underline">
+                      Elvis Cruz Chullo
+                    </a>
+                  </p>
+                  <div className="flex space-x-1 text-sm ">
+                    <time dateTime={"2022-12-12"}>{metadata.time}</time>
+                  </div>
                 </div>
               </div>
+              <div className="flex self-end">{/* Social Links Here */}</div>
             </div>
-            <div className="flex self-end">{/* Social Links Here */}</div>
+            <h1 className="font-bold text-4xl mb-1 ">{metadata.title}</h1>
+            <h2 className="blog-detail-header-subtitle mb-2 text-xl ">
+              {metadata.description}
+            </h2>
+            <div className="h-96 bg-black mx-auto w-full relative">
+              <Image
+                priority
+                layout="fill"
+                objectFit="cover"
+                src={metadata.imageUrl}
+                alt=""
+              />
+            </div>
+            <br />
           </div>
-          <h1 className="font-bold text-4xl mb-1 ">{metadata.title}</h1>
-          <h2 className="blog-detail-header-subtitle mb-2 text-xl ">
-            {metadata.description}
-          </h2>
-          <div className="h-96 bg-black mx-auto w-full relative">
-            <Image
-              priority
-              layout="fill"
-              objectFit="cover"
-              src={metadata.imageUrl}
-              alt=""
-            />
-          </div>
-          <br />
-        </div>
-        <article>
-          <Markdown>{post.content}</Markdown>
-        </article>
-      </main>
-    </div>
+          <article>
+            <Markdown>{post.content}</Markdown>
+          </article>
+        </main>
+      </div>
+    </>
   );
 }
 
