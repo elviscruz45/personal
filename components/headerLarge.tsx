@@ -21,7 +21,7 @@ export default function Header() {
          rounded-none border border-white border-opacity-40
           bg-white bg-opacity-80 shadow-lg
            shadow-black/[0.03] backdrop-blur-[0.5rem]
-            sm:top-6 sm:h-[3.25rem] sm:w-[40rem] sm:rounded-full dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
+            sm:top-6 sm:h-[3.25rem] sm:w-[25rem] sm:rounded-full dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>

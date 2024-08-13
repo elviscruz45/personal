@@ -30,6 +30,8 @@ El modelo muestra una mejora significativa en la precisión de detección en com
 - Análisis de vídeo en tiempo real
 - Robótica industrial
 
+![Alt text](/rtdetr.jpeg)
+
 ## Impacto en la Industria
 
 La introducción de RT-DETR tiene el potencial de acelerar el desarrollo en varios sectores que dependen de la visión por computadora, ofreciendo una solución más rápida y precisa para la detección de objetos.
