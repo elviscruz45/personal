@@ -61,7 +61,7 @@ export default async function RecipePage({
 
     return (
       <>
-        <div className="px-5 sm:w-2/3 m-auto">
+        <div className="px-5 sm:w-2/ m-auto">
           <main>
             <HeaderLarge />
             <div className="blog-detail-header">
@@ -174,11 +174,11 @@ export default async function RecipePage({
                   td: ({ node, ...props }) => (
                     <td className="py-3 px-6 text-left" {...props} />
                   ),
-                  img: ({ node, ...props }) => (
-                    <div className="flex justify-center">
-                      <img {...props} />
-                    </div>
-                  ),
+                  // img: ({ node, ...props }) => (
+                  //   <div className="flex justify-center">
+                  //     <img {...props} />
+                  //   </div>
+                  // ),
                 }}
               >
                 {post.content}
