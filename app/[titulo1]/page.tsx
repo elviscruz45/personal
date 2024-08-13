@@ -61,7 +61,7 @@ export default async function RecipePage({
 
     return (
       <>
-        <div className="w-2/3 m-auto">
+        <div className="px-5 sm:w-7/8 m-auto">
           <main>
             <HeaderLarge />
             <div className="blog-detail-header">
