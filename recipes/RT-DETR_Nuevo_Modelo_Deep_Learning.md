@@ -1,7 +1,7 @@
 ---
 title: "RT-DETR Nuevo Modelo Deep Learning"
 time: "2024-08-12"
-description: "El RT-DETR es un modelo de deep learning innovador que mejora la detección de objetos con precisión y eficiencia. Esta nueva versión promete avances significativos en el reconocimiento de imágenes y la segmentación en diversas aplicaciones."
+description: "Esta nueva versión promete avances significativos en el reconocimiento de imágenes y la segmentación en diversas aplicaciones."
 imageUrl: "/rtdetr.jpeg"
 videoId: "fqgHlUH3OXQ"
 numero: "2"

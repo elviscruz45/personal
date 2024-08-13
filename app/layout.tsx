@@ -6,12 +6,44 @@ import { Toaster } from "react-hot-toast";
 import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
+import type { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Elvis | Personal Website",
-  description: "Fullstack Developer and Mechanical Engineer",
+export const metadata: Metadata = {
+  metadataBase: new URL("https://www.codewithelvis.dev/"),
+
+  title: {
+    default: "Elvis | Blogs",
+    template: "%s - Blogs",
+  },
+  description: "Blogs de Tecnologia",
+  openGraph: {
+    title: "Finant Educacion 4.0 para ayudarte en tu titulacion",
+    description:
+      "Asesoria y creacion de tesis profesionales para graduados universitarios, maestria y doctorado.",
+
+    url: "https://www.codewithelvis.dev/",
+    siteName: "Finant Educacion",
+    images: [
+      {
+        url: "https://www.codewithelvis.dev/opengraph-image.png", // Must be an absolute URL
+        width: 800,
+        height: 600,
+      },
+      {
+        url: "https://www.codewithelvis.dev/opengraph-image.png", // Must be an absolute URL
+        width: 1800,
+        height: 1600,
+        alt: "My custom alt",
+      },
+    ],
+    locale: "es",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 // export const metadata: Metadata = {

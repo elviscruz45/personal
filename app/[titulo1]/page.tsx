@@ -146,6 +146,33 @@ export default async function RecipePage({
                   code: ({ node, ...props }) => (
                     <code className="" {...props} />
                   ),
+                  table: ({ node, ...props }) => (
+                    <table className="min-w-full bg-white" {...props} />
+                  ),
+                  thead: ({ node, ...props }) => (
+                    <thead
+                      className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal"
+                      {...props}
+                    />
+                  ),
+                  tbody: ({ node, ...props }) => (
+                    <tbody
+                      className="text-gray-600 text-sm font-light"
+                      {...props}
+                    />
+                  ),
+                  tr: ({ node, ...props }) => (
+                    <tr
+                      className="border-b border-gray-200 hover:bg-gray-100"
+                      {...props}
+                    />
+                  ),
+                  th: ({ node, ...props }) => (
+                    <th className="py-3 px-6 text-left" {...props} />
+                  ),
+                  td: ({ node, ...props }) => (
+                    <td className="py-3 px-6 text-left" {...props} />
+                  ),
                 }}
               >
                 {post.content}
