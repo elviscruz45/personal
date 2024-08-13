@@ -21,6 +21,7 @@ interface Post {
   description: string;
   imageUrl: string;
   videoId?: string;
+  numero?: string;
 }
 // This function generates the static params
 export async function generateStaticParams() {
@@ -54,6 +55,7 @@ export default async function RecipePage({
       description: matterResult.data.description || "default-description",
       imageUrl: matterResult.data.imageUrl || "default-image-url",
       videoId: matterResult.data.videoId || "default-video-id",
+      numero: matterResult.data.numero || "default-numero",
     };
 
     return (

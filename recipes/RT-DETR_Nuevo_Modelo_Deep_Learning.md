@@ -4,6 +4,7 @@ time: "2024-08-12"
 description: "El RT-DETR es un modelo de deep learning innovador que mejora la detección de objetos con precisión y eficiencia. Esta nueva versión promete avances significativos en el reconocimiento de imágenes y la segmentación en diversas aplicaciones."
 imageUrl: "/rtdetr.jpeg"
 videoId: "fqgHlUH3OXQ"
+numero: "2"
 ---
 
 El campo de la visión por computadora ha dado un salto significativo con la introducción de RT-DETR (Real-Time Detection Transformer), un innovador modelo de deep learning diseñado para la detección de objetos en tiempo real. Desarrollado por investigadores de la Universidad de Ciencia y Tecnología de China y Baidu, RT-DETR promete revolucionar aplicaciones que requieren análisis visual rápido y preciso.

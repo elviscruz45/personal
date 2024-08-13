@@ -17,6 +17,10 @@ export default function Home({ params }: any) {
   const postMetadata = getPostMetadata("recipes");
 
   const blogs = postMetadata;
+
+  //ordernar blog por numero
+  blogs.sort((a, b) => parseInt(a.numero) - parseInt(b.numero));
+
   return (
     <>
       <Header />

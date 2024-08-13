@@ -4,6 +4,7 @@ time: "2024-08-07"
 description: "Este artículo explora el aprendizaje automático no supervisado, centrando la atención en los algoritmos que encuentran patrones en datos no etiquetados."
 imageUrl: "/Unsupervised-Machine-Learning-Patterns-Social-and-Blog.jpg"
 videoId: "d1tVOcZwM3s"
+numero: "1"
 ---
 
 En este artículo, exploraremos el aprendizaje automático no supervisado, enfocándonos en los algoritmos que identifican patrones en datos no etiquetados. El aprendizaje automático no supervisado es una técnica poderosa que se utiliza para descubrir estructuras ocultas y relaciones en conjuntos de datos sin etiquetas previas. Veremos cómo estos algoritmos pueden encontrar patrones, agrupar datos similares y reducir la dimensionalidad de la información para facilitar su análisis.

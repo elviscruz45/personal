@@ -15,6 +15,7 @@ export default function getPostMetadata(basePath: any) {
       time: matterResult.data.time,
       imageUrl: matterResult.data.imageUrl,
       description: matterResult.data.description,
+      numero: matterResult.data.numero,
       slug: filename.replace(".md", ""),
     };
   });
