@@ -1,39 +1,26 @@
 ---
 title: "Machine Learning No Supevisado"
-time: "2022-12-12"
-description: "Classic, chewy cookies loaded with semi-sweet chocolate chips, perfect for dunking in milk."
+time: "2024-08-07"
+description: "Este artículo explora el aprendizaje automático no supervisado, centrando la atención en los algoritmos que encuentran patrones en datos no etiquetados."
 imageUrl: "/Unsupervised-Machine-Learning-Patterns-Social-and-Blog.jpg"
 ---
 
-# Classic Banana Bread
+En este artículo, exploraremos el aprendizaje automático no supervisado, enfocándonos en los algoritmos que identifican patrones en datos no etiquetados. El aprendizaje automático no supervisado es una técnica poderosa que se utiliza para descubrir estructuras ocultas y relaciones en conjuntos de datos sin etiquetas previas. Veremos cómo estos algoritmos pueden encontrar patrones, agrupar datos similares y reducir la dimensionalidad de la información para facilitar su análisis.
 
-## Ingredients
+## Algoritmos Comunes en Aprendizaje No Supervisado
 
-- 1 3/4 cups (220g) all-purpose flour
-- 3/4 cup (150g) granulated sugar
-- 1 teaspoon baking powder
-- 1/4 teaspoon baking soda
-- 1/4 teaspoon salt
-- 1/2 cup (115g) unsalted butter, melted
-- 2 large eggs
-- 3 ripe bananas, mashed (about 1 1/2 cups)
-- 1 teaspoon vanilla extract
-- 1/2 cup (60g) chopped walnuts or pecans (optional)
+1. **Algoritmos de Agrupamiento**: Estos algoritmos dividen los datos en grupos o clústeres según su similitud. Ejemplos incluyen K-means y el algoritmo de agrupamiento jerárquico.
 
-## Instructions
+2. **Algoritmos de Reducción de Dimensionalidad**: Se utilizan para reducir el número de variables en los datos, manteniendo la mayor cantidad de información posible. Ejemplos incluyen PCA (Análisis de Componentes Principales) y t-SNE (t-Distributed Stochastic Neighbor Embedding).
 
-1. **Preheat oven** to 350°F (175°C). Grease a 9x5-inch loaf pan.
+3. **Modelos de Distribución**: Estos modelos estiman la distribución subyacente de los datos. Ejemplos incluyen los Modelos de Mezcla de Gauss y los Modelos de Markov Ocultos.
 
-2. **Whisk together** flour, sugar, baking powder, baking soda, and salt in a large bowl.
+## Aplicaciones del Aprendizaje No Supervisado
 
-3. **Mix** melted butter, eggs, mashed bananas, and vanilla extract in another bowl.
+El aprendizaje automático no supervisado se utiliza en una variedad de aplicaciones, como:
 
-4. **Stir** the wet ingredients into the dry ingredients just until moistened. Fold in nuts if using.
+- **Segmentación de Clientes**: Agrupar clientes en segmentos similares para campañas de marketing dirigidas.
+- **Detección de Anomalías**: Identificar comportamientos inusuales en datos que podrían indicar fraude o fallos en el sistema.
+- **Reducción de Dimensionalidad**: Simplificar los datos para su visualización y análisis.
 
-5. **Pour** batter into the prepared loaf pan.
-
-6. **Bake** for 60-65 minutes or until a toothpick inserted into the center comes out clean.
-
-7. **Cool** in the pan for 10 minutes, then remove from the pan and cool completely on a wire rack.
-
-Slice and enjoy your homemade banana bread!
+Explorar el aprendizaje automático no supervisado puede revelar información valiosa y ayudar a tomar decisiones basadas en datos sin la necesidad de etiquetas explícitas.

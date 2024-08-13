@@ -9,8 +9,6 @@ import { useSectionInView } from "@/lib/hooks";
 export default function Blogs({ blogs }: any) {
   const { ref } = useSectionInView("Blog", 0.5);
 
-  console.log("comoestas", blogs);
-
   return (
     <section
       id="blog"

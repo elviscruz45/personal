@@ -1,4 +1,6 @@
-import Markdown from "markdown-to-jsx";
+// import Markdown from "markdown-to-jsx";
+// import Markdown from "react-markdown";
+
 import getPostMetadata from "../../lib/getPostMetadata";
 import React from "react";
 import fs from "fs";
@@ -7,6 +9,9 @@ import HeaderLarge from "@/components/headerLarge";
 import Image from "next/image";
 import { BlogContenido } from "@/components/blogs/BlogContenido";
 import path from "path";
+import remarkGfm from "remark-gfm";
+import ReactMarkdown from "react-markdown";
+
 interface Post {
   slug: string;
   content: string;
@@ -100,7 +105,40 @@ export default async function RecipePage({
               <br />
             </div>
             <article>
-              <Markdown>{post.content}</Markdown>{" "}
+              <ReactMarkdown
+                components={{
+                  h1: ({ node, ...props }) => (
+                    <h1 className="text-3xl font-bold my-4" {...props} />
+                  ),
+                  h2: ({ node, ...props }) => (
+                    <h2 className="text-2xl font-bold my-4" {...props} />
+                  ),
+                  h3: ({ node, ...props }) => (
+                    <h3 className="text-xl font-bold my-4" {...props} />
+                  ),
+                  p: ({ node, ...props }) => <p className="my-2" {...props} />,
+                  ul: ({ node, ...props }) => (
+                    <ul className="list-disc my-2" {...props} />
+                  ),
+                  ol: ({ node, ...props }) => (
+                    <ol className="list-decimal my-2" {...props} />
+                  ),
+                  li: ({ node, ...props }) => (
+                    <li className="ml-4" {...props} />
+                  ),
+                  blockquote: ({ node, ...props }) => (
+                    <blockquote
+                      className="border-l-4 border-gray-300 pl-4 italic my-4"
+                      {...props}
+                    />
+                  ),
+                  code: ({ node, ...props }) => (
+                    <code className="" {...props} />
+                  ),
+                }}
+              >
+                {post.content}
+              </ReactMarkdown>
             </article>
           </main>
         </div>
