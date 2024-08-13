@@ -11,7 +11,7 @@ import { BlogContenido } from "./BlogContenido";
 export function Youtube({ id, title }: any) {
   return (
     <>
-      <div className="w-2/3 m-auto">
+      <div className="sm:w-2/3 m-auto">
         <LiteYouTubeEmbed
           id={id}
           title="What’s new in Material Design for the web "
