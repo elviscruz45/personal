@@ -19,12 +19,12 @@ export const metadata: Metadata = {
   },
   description: "Blogs de Tecnologia",
   openGraph: {
-    title: "Finant Educacion 4.0 para ayudarte en tu titulacion",
+    title: "Blog de tecnologia",
     description:
-      "Asesoria y creacion de tesis profesionales para graduados universitarios, maestria y doctorado.",
+      "Pasión por revolucionar la tecnología a través del aprendizaje automático y la inteligencia artificial generativa.",
 
     url: "https://www.codewithelvis.dev/",
-    siteName: "Finant Educacion",
+    siteName: "Blog de tecnologia",
     images: [
       {
         url: "https://www.codewithelvis.dev/opengraph-image.png", // Must be an absolute URL
