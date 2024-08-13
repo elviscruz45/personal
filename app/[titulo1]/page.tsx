@@ -11,6 +11,7 @@ import { BlogContenido } from "@/components/blogs/BlogContenido";
 import path from "path";
 import remarkGfm from "remark-gfm";
 import ReactMarkdown from "react-markdown";
+import { Youtube } from "@/components/blogs/youtube";
 
 interface Post {
   slug: string;
@@ -19,6 +20,7 @@ interface Post {
   title: string;
   description: string;
   imageUrl: string;
+  videoId?: string;
 }
 // This function generates the static params
 export async function generateStaticParams() {
@@ -51,6 +53,7 @@ export default async function RecipePage({
       title: matterResult.data.title || "default-title",
       description: matterResult.data.description || "default-description",
       imageUrl: matterResult.data.imageUrl || "default-image-url",
+      videoId: matterResult.data.videoId || "default-video-id",
     };
 
     return (
@@ -90,9 +93,8 @@ export default async function RecipePage({
                 <div className="flex self-end">{/* Social Links Here */}</div>
               </div>
               <h1 className="font-bold text-4xl mb-1 ">{post.title}</h1>
-              <h2 className="blog-detail-header-subtitle mb-2 text-xl ">
-                {post.description}
-              </h2>
+              <br />
+
               <div className="h-96 bg-black mx-auto w-full relative">
                 <Image
                   priority
@@ -103,6 +105,13 @@ export default async function RecipePage({
                 />
               </div>
               <br />
+            </div>
+            <h2 className="blog-detail-header-subtitle mb-2  ">
+              {post.description}
+            </h2>
+            <br />
+            <div>
+              <Youtube id={post.videoId} />
             </div>
             <article>
               <ReactMarkdown
