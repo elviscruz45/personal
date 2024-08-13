@@ -12,6 +12,7 @@ import path from "path";
 import remarkGfm from "remark-gfm";
 import ReactMarkdown from "react-markdown";
 import { Youtube } from "@/components/blogs/youtube";
+import { notFound } from "next/navigation";
 
 interface Post {
   slug: string;
@@ -184,7 +185,7 @@ export default async function RecipePage({
     );
   } catch (error) {
     console.error(`Error reading file ${filePath}:`, error);
-    return <div>Recipe not found</div>;
+    return notFound();
   }
 }
 //------------------------------------------------------------------------------------------------------------------------------

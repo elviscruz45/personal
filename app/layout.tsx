@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     default: "Elvis | Blogs",
     template: "%s - Blogs",
   },
-  description: "Blogs de Tecnologia",
+  description: "Blogs de Tecnología",
   openGraph: {
-    title: "Blog de tecnologia",
+    title: "Blog de tecnología",
     description:
       "Pasión por revolucionar la tecnología a través del aprendizaje automático y la inteligencia artificial generativa.",
 
     url: "https://www.codewithelvis.dev/",
-    siteName: "Blog de tecnologia",
+    siteName: "Blog de tecnología",
     images: [
       {
         url: "https://www.codewithelvis.dev/opengraph-image.png", // Must be an absolute URL
