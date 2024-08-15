@@ -19,7 +19,7 @@ export default function Home({ params }: any) {
   const blogs = postMetadata;
 
   //ordernar blog por numero
-  blogs.sort((a, b) => parseInt(a.numero) - parseInt(b.numero));
+  blogs.sort((a, b) => parseInt(b.numero) - parseInt(a.numero));
 
   return (
     <>

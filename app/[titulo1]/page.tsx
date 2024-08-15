@@ -61,7 +61,7 @@ export default async function RecipePage({
 
     return (
       <>
-        <div className="px-5 sm:w-2/ m-auto">
+        <div className="px-5 sm:w-2/3 m-auto">
           <main>
             <HeaderLarge />
             <div className="blog-detail-header">
@@ -96,9 +96,9 @@ export default async function RecipePage({
                 <div className="flex self-end">{/* Social Links Here */}</div>
               </div>
               <h1 className="font-bold text-4xl mb-1 ">{post.title}</h1>
-              <br />
+              {/* <br /> */}
 
-              <div className="h-96 bg-black mx-auto w-full relative">
+              {/* <div className="h-96 bg-black mx-auto w-full relative">
                 <Image
                   priority
                   layout="fill"
@@ -106,8 +106,8 @@ export default async function RecipePage({
                   src={post.imageUrl}
                   alt=""
                 />
-              </div>
-              <br />
+              </div> */}
+              {/* <br /> */}
             </div>
             <h2 className="blog-detail-header-subtitle mb-2  ">
               {post.description}
@@ -118,6 +118,7 @@ export default async function RecipePage({
             </div>
             <article>
               <ReactMarkdown
+                className="prose"
                 components={{
                   h1: ({ node, ...props }) => (
                     <h1 className="text-3xl font-bold my-4" {...props} />
@@ -136,7 +137,7 @@ export default async function RecipePage({
                     <ol className="list-decimal my-2" {...props} />
                   ),
                   li: ({ node, ...props }) => (
-                    <li className="ml-4" {...props} />
+                    <li className="ml-4 my-3" {...props} />
                   ),
                   blockquote: ({ node, ...props }) => (
                     <blockquote
@@ -176,7 +177,13 @@ export default async function RecipePage({
                   ),
                   // img: ({ node, ...props }) => (
                   //   <div className="flex justify-center">
-                  //     <img {...props} />
+                  //     <Image
+                  //       {...props}
+                  //       src={props.src || "/images/ElvisProfile.jpeg"}
+                  //       alt={props.alt || "Default alt text"}
+                  //       width={700}
+                  //       height={400}
+                  //     />
                   //   </div>
                   // ),
                 }}
