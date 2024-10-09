@@ -42,7 +42,7 @@ export default function Blog({ title, description, imageUrl }: BlogsProps) {
             </p>
             <div className="h-4"></div>
             <div></div>
-            <div className="font-bold">Read More...</div>
+            <div className="font-bold">Leer mas...</div>
             {/* <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li

@@ -1,7 +1,7 @@
 // import Markdown from "markdown-to-jsx";
 // import Markdown from "react-markdown";
 
-import getPostMetadata from "../../lib/getPostMetadata";
+// import getPostMetadata from "../../lib/getPostMetadata";
 import React from "react";
 import fs from "fs";
 import matter from "gray-matter";

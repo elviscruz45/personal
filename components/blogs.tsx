@@ -14,7 +14,7 @@ export default function Blogs({ blogs }: any) {
       <SectionHeading>Blogs</SectionHeading>
 
       <div>
-        {blogs.map((project: any, index: number) => (
+        {blogsData.map((project: any, index: number) => (
           <React.Fragment key={index}>
             <Blog {...project} />
             <br />

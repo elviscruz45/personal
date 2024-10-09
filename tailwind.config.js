@@ -20,6 +20,8 @@ module.exports = {
     },
   },
   plugins: [
+    require("@tailwindcss/typography"),
+
     function ({ addUtilities }) {
       const newUtilities = {
         ".clip-triangle": {

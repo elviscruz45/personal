@@ -9,17 +9,17 @@ import Blogs from "@/components/blogs";
 import VBlogs from "@/components/vblogs";
 import Image from "next/image";
 import Header from "@/components/header";
-import getPostMetadata from "@/lib/getPostMetadata";
+// import getPostMetadata from "@/lib/getPostMetadata";
 
 export default function Home({ params }: any) {
   const sectionName = params;
 
-  const postMetadata = getPostMetadata("recipes");
+  // const postMetadata = getPostMetadata("recipes");
 
-  const blogs = postMetadata;
+  // const blogs = postMetadata;
 
-  //ordernar blog por numero
-  blogs.sort((a, b) => parseInt(b.numero) - parseInt(a.numero));
+  // //ordernar blog por numero
+  // blogs.sort((a, b) => parseInt(b.numero) - parseInt(a.numero));
 
   return (
     <>
@@ -28,7 +28,7 @@ export default function Home({ params }: any) {
         <Intro />
         <SectionDivider />
         {/* <About /> */}
-        <Blogs blogs={blogs} />
+        <Blogs />
 
         {/* <VBlogs /> */}
         <Projects />

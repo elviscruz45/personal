@@ -46,48 +46,6 @@ export const metadata: Metadata = {
   },
 };
 
-// export const metadata: Metadata = {
-//   metadataBase: new URL("https://finant.pe"),
-
-//   title: {
-//     default: "Finant Educacion 4.0 para ayudarte en tu titulacion",
-//     template: "%s - Tesis",
-//   },
-//   description:
-//     "Asesoria y creacion de tesis profesionales para graduados universitarios, maestria y doctorado.",
-
-//   // openGraph: {
-//   //   images: "/opengraph-image.png",
-//   // },
-
-//   openGraph: {
-//     title: "Finant Educacion 4.0 para ayudarte en tu titulacion",
-//     description:
-//       "Asesoria y creacion de tesis profesionales para graduados universitarios, maestria y doctorado.",
-
-//     url: "https://finant.pe",
-//     siteName: "Finant Educacion",
-//     images: [
-//       {
-//         url: "https://finant.pe/opengraph-image.png", // Must be an absolute URL
-//         width: 800,
-//         height: 600,
-//       },
-//       {
-//         url: "https://finant.pe/opengraph-image.png", // Must be an absolute URL
-//         width: 1800,
-//         height: 1600,
-//         alt: "My custom alt",
-//       },
-//     ],
-//     locale: "es",
-//     type: "website",
-//   },
-//   twitter: {
-//     card: "summary_large_image",
-//   },
-// };
-
 export default function RootLayout({
   children,
 }: {
@@ -102,15 +60,15 @@ export default function RootLayout({
        dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90
        `}
       >
-        <div
+        {/* <div
           className="bg-[#FF00FF00] dark:bg-[#FFFFA07A] absolute top-[-6rem] -z-10 right-[11rem]
          h-[31.25rem] w-[31.25rem] rounded-full blur-[40rem] sm:w-[68.75rem]"
-        ></div>
-        <div
+        ></div> */}
+        {/* <div
           className="bg-[#FF00FF00] dark:bg-[#FFFFA07A] absolute top-[-1rem] -z-10 left-[-35rem]
          h-[31.25rem] w-[50rem] rounded-full blur-[40rem] sm:w-[68.75rem]
           md:left-[-33rem] lg-left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"
-        ></div>
+        ></div> */}
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             {/* <Header /> */}

@@ -23,26 +23,20 @@ export function BlogContenido({ postData }: any) {
         <div className="flex flex-row justify-between mb-2">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <a href="#">
-                {/* <span className="sr-only">Elvis</span> */}
-                <div className="relative h-10 w-10 !mb-0">
-                  <Image
-                    priority
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-full"
-                    src="/images/ElvisProfile.jpeg"
-                    alt=""
-                  />
-                </div>
-              </a>
+              {/* <span className="sr-only">Elvis</span> */}
+              <div className="relative h-10 w-10 !mb-0">
+                <Image
+                  priority
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-full"
+                  src="/images/ElvisProfile.jpeg"
+                  alt=""
+                />
+              </div>
             </div>
             <div className="ml-3">
-              <p className="text-sm font-medium !mb-0">
-                <a href="#" className="hover:underline">
-                  Elvis Cruz Chullo
-                </a>
-              </p>
+              <p className="text-sm font-medium !mb-0">Elvis Cruz Chullo</p>
               <div className="flex space-x-1 text-sm ">
                 {/* <time dateTime={"2022-12-12"}>{article.time}</time> */}
               </div>

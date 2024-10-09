@@ -9,7 +9,7 @@ import {
   useActiveSectionContext,
 } from "@/context/active-section-context";
 
-export default function Header() {
+export default function HeaderLarge() {
   //   const [activeSection, setActiveSection] = useState("Projects");
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();

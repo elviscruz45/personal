@@ -10,19 +10,21 @@ import webpageproject from "@/public/webpageproject.png";
 import teseo_mining from "@/public/teseo_mining.png";
 import projectbelts from "@/public/projectbelts.png";
 import unsupervised from "@/public/Unsupervised-Machine-Learning-Patterns-Social-and-Blog.jpg";
+import transformers from "@/public/transformers.jpeg";
+
 import { StaticImageData } from "next/image";
 // import markdownContent from "@/content/blogs/nft-marketplace-in-react-js-next-typescript-full-guide.md";
-import { content } from "@/content/blogs/unsupervisedMachinelearning";
+// import { content } from "@/content/blogs/unsupervisedMachinelearning";
 import { time } from "console";
 
 export const blogsData = [
   {
-    title: "Machine Learning No supervised",
-    time: "2022-12-12",
+    title: "Transformers para LLM",
+    time: "2024-10-09",
     description:
-      "This article explores unsupervised machine learning, focusing on algorithms that find patterns in unlabeled data.",
-    imageUrl: unsupervised,
-    markdown: content,
+      "Este artículo explora el aprendizaje automático no supervisado, enfocándose en algoritmos que encuentran patrones en datos no etiquetados.",
+    imageUrl: transformers,
+    // markdown: content,
   },
 ] as const;
 
