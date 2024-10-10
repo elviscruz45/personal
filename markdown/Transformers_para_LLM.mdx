@@ -114,15 +114,17 @@ En NLP, el Embedding se refiere a convertir las palabras en vectores. Lo interes
 </div>
 
 <div className="mt-4"></div>
-## Codificación Posicional
+## La Posicion de las palabras
 
 <div className="mt-4"></div>
 
-La posición de una palabra juega un papel principal para que el modelo pueda entender la secuencia que le hemos pasado.
+La posición de una palabra es crucial para que el modelo pueda interpretar correctamente la secuencia que se le proporciona.
 
-Las RNN, por su arquitectura recurrente, dan importancia al orden de la secuencia. Sin embargo, el Transformer pierde el mecanismo de recurrencia para utilizar el mecanismo de «auto-atención de múltiples cabezas». Esto, en teoría, permite capturar dependencias más largas y agilizar el entrenamiento bastante.
+<div className="mt-4"></div>
 
-En un Transformer, el texto fluye de manera simultánea a entre el encoder y el decoder (ver el GIF de más arriba). Así pues, es primordial añadir información sobre la posición de cada palabra en el vector de secuencia. Los autores del paper decidieron aplicar una función sinusoidal (ver más de abajo) en la que no voy a entrar mucho en detalle, puesto que se va del scope del post.
+En las RNN, la arquitectura recurrente asegura que el orden de las palabras sea importante. Sin embargo, el Transformer abandona este mecanismo recurrente en favor del «mecanismo de atención múltiple», lo que teóricamente permite captar dependencias a largo plazo de manera más eficiente y acelerar el proceso de entrenamiento.
+
+<div className="mt-4"></div>
 
 <div className="mt-4"></div>
 
@@ -137,27 +139,34 @@ En un Transformer, el texto fluye de manera simultánea a entre el encoder y el 
 </div>
 <div className="mt-4"></div>
 
-El criterio que siguieron los autores para proponer estas funciones senoidales se basa en satisfacer los siguientes puntos:
-
-- Tenemos un valor único para cada paso único (la posición de la palabra).
-- La distancia entre dos palabras separadas el mismo número de pasos debe ser consistente sin importar la longitud del texto.
-- El rango de valores posibles es consistente e indiferente a la longitud de la secuencia.
-- Es determinístico.
-  <div className="mt-4"></div>
+<div className="mt-4"></div>
 
 ## Auto-atención
 
 <div className="mt-4"></div>
+El mecanismo de autoatención es lo que permite al modelo identificar con qué
+otra palabra de la secuencia está relacionada la palabra que se está procesando
+en ese momento.
+<div className="mt-4"></div>
+Supongamos que queremos traducir la siguiente frase:
+<div className="mt-4"></div>
+"Alice and Tom were playing soccer, but she scored the winning goal."
 
-El mecanismo de auto-atención es lo que permite al modelo saber con qué otra palabra de la secuencia está relacionada la palabra que se procesa en ese instante de tiempo. Parece complejo de entender, pero vamos a ver un ejemplo que lo facilita todo. Supongamos que queremos traducir la siguiente frase:
+<div className="mt-4"></div>
 
-Mary and Paul were running together but he got injured
+Cuando el modelo está procesando la secuencia, ¿a quién se refiere "she"? Aunque esta puede parecer una pregunta sencilla para una persona, representa un problema complejo en el procesamiento del lenguaje natural (NLP). El mecanismo de autoatención permite asociar "she" con Tom en vez de con el resto de las palabras.
 
-Cuando el modelo está procesando la secuencia, ¿a qué se refiere «he»? Parece una pregunta muy sencilla para una persona, pero se trata de un problema complejo que ha existido durante bastante tiempo en NLP. El mecanismo de auto-atención permite asociar «he» con Paul en vez de con el resto de palabras.
+<div className="mt-4"></div>
 
-Aunque las RNN permiten referenciar palabras anteriores de la secuencia, sufren de memoria corto-placista. Esto provoca que cuando trabajamos con una secuencia larga las RNN no pueden referenciar palabras muy antiguas. Las GRU y LSTM tienen una ventana de memoria más grande que las RNN, pero siguen teniendo una capacidad limitada. El mecanismo de auto-atención resuelve esto ya que, en teoría, posee una ventana de referencia infinita, acotada únicamente por la potencia computacional. Esto permite que el algoritmo pueda usar el contexto completo para realizar la tarea.
+Aunque las RNN (redes neuronales recurrentes) pueden referenciar palabras anteriores de la secuencia, sufren de problemas de memoria a corto plazo. Esto significa que, al trabajar con secuencias largas, las RNN tienen dificultades para referenciar palabras que aparecieron hace mucho tiempo.
 
-{" "}
+<div className="mt-4"></div>
+
+El mecanismo de autoatención soluciona este problema, ya que, en teoría, tiene una ventana de referencia infinita, limitada solo por la potencia computacional. Esto permite que el algoritmo use el contexto completo para realizar la tarea.
+
+<div className="mt-4"></div>
+
+En un Transformer, el texto fluye de manera simultánea entre el encoder y el decoder. Por lo tanto, es fundamental añadir información sobre la posición de cada palabra en el vector de secuencia. Los autores del paper decidieron aplicar una función sinusoidal para este propósito. No entraré en muchos detalles sobre esto, ya que se sale del alcance de este post.
 
 <div className="mt-4"></div>
 
@@ -177,11 +186,16 @@ Aunque las RNN permiten referenciar palabras anteriores de la secuencia, sufren 
 
 Para poder entender el mecanismo complejo de multi-cabezas, primero es necesario entender lo simple. El producto escalar.
 
+<div className="mt-4"></div>
+
 El mecanismo toma 3 valores de entrada:
+
+<div className="mt-4"></div>
 
 1. Q: se trata de la query que representa el vector de una palabra.
 2. K: las keys que son todas las demás palabras de la secuencia.
 3. V: el valor vectorial de la palabra que se procesa en dicho punto temporal.
+   <div className="mt-4"></div>
 
 En el caso de auto-atención, los valores V y Q son el mismo vector. Y por lo tanto, el mecanismo nos devuelve la importancia de la palabra en el texto:
 
@@ -200,6 +214,8 @@ En el caso de auto-atención, los valores V y Q son el mismo vector. Y por lo ta
 
 Realizar el producto escalar de Q y K (transpuesto) significa calcular la proyección ortogonal de Q en K. O sea, intentar estimar la alineación de los vectores y devolver un peso para cada palabra del texto.
 
+<div className="mt-4"></div>
+
 Se normaliza el resultado al dividir por la raíz del tamaño de K (o sea, por el tamaño de la secuencia). Esto se hace para evitar problemas de fuga de gradiente que se producirían en la Softmax si tenemos valores de gran tamaño. Aplicar la softmax se debe a intentar escalar el peso de la palabra en un rango entre 0 y 1. Finalmente, se multiplican estos pesos por el valor (el vector de la palabra con la que estamos trabajando) para reducir la importancia de palabras no relevantes y quedarnos solo con las que nos importan.
 
 <div className="mt-4"></div>
@@ -209,6 +225,8 @@ Se normaliza el resultado al dividir por la raíz del tamaño de K (o sea, por e
 <div className="mt-4"></div>
 
 La versión del mecanismo que utiliza un Transformer es una proyección de Q, K y V en h espacios lineales. Siendo h la cantidad de cabezas que tiene el mecanismo (siendo h=8 en el paper). Esto permite que cada cabeza se centre en aspectos diferentes, para después concatenar los resultados. El tener varios subespacios y, por lo tanto, varias representaciones de importancia de cada palabra. Esto permite que la propia palabra no sea la dominante en el contexto.
+
+<div className="mt-4"></div>
 
 La arquitectura de multi-cabeza es la leche. Nos permite aprender dependencias mucho más complejas sin añadir tiempo de entrenamiento gracias a que la proyección lineal reduce el tamaño de cada vector. (En el paper presentado usan 8 proyecciones en subespacio de dimensión 64).
 
@@ -276,8 +294,8 @@ la derecha a todos. Os adjunto los resultados para una tarea de traducción:
 
 <div className="mt-4"></div>
 
-La publicación del paper «Attention is all you need» fue una revolución en el campo de NLP. Solventan los problemas de memoria que presentan las RNN, mejoran el rendimiento de GRU y LSTM, y permiten entrenar más rápido con cuerpos más pesados.
+La publicación del paper «Attention is all you need» fue una revolución en el campo de NLP. Solventan los problemas de memoria que presentan las RNN
 
-La clave de la arquitectura es el mecanismo de auto-atención y el uso de autoencoders para agilizar el entrenamiento y producir resultados top. Hoy en día, 3 años después, siguen siendo estado del arte con implementaciones como BERT, Roberta, XLNET, o GPT.
+<div className="mt-4"></div>
 
-Si seguís leyendo después de la parrafada que he soltado, compartid el post con amigos para ayudarnos a crecer o tenéis dudas escribidnos un comentario y os responderemos! Hasta el siguiente!
+La clave de la arquitectura es el mecanismo de auto-atención y el uso de autoencoders para agilizar el entrenamiento y producir resultados top son la base del uso de GPT.
