@@ -1,5 +1,6 @@
 import Welcome from "@/markdown/welcome.mdx";
 import Transformers_para_LLM from "@/markdown/Transformers_para_LLM.mdx";
+import Preguntas_de_JavaScript from "@/markdown/100_Preguntas_de_JavaScript.mdx";
 import React, { ReactNode } from "react";
 import HeaderLarge from "@/components/headerLarge";
 import Image from "next/image";
@@ -36,11 +37,22 @@ const overrideComponents = {
 const Page: React.FC = ({ params }: any) => {
   const sectionName = params.Blogs;
 
+  const DynamicComponent = () => {
+    switch (sectionName) {
+      case "Transformers_para_LLM":
+        return <Transformers_para_LLM />;
+
+      case "100_Preguntas_de_JavaScript":
+        return <Preguntas_de_JavaScript />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="lg:px-60 md:px-40 px-10">
       <HeaderLarge />
-
-      <Transformers_para_LLM />
+      {DynamicComponent()}
     </div>
   );
 };

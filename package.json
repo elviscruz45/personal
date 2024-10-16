@@ -53,6 +53,7 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.14",
-    "@types/react-vertical-timeline-component": "^3.3.4"
+    "@types/react-vertical-timeline-component": "^3.3.4",
+    "eslint-plugin-mdx": "^3.1.5"
   }
 }

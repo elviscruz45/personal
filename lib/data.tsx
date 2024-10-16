@@ -10,7 +10,8 @@ import webpageproject from "@/public/webpageproject.png";
 import teseo_mining from "@/public/teseo_mining.png";
 import projectbelts from "@/public/projectbelts.png";
 import unsupervised from "@/public/Unsupervised-Machine-Learning-Patterns-Social-and-Blog.jpg";
-import transformers from "@/public/transformers.jpeg";
+import transformers from "@/public/markdown/covers/transformers.jpeg";
+import js from "@/public/markdown/covers/js.png";
 
 import { StaticImageData } from "next/image";
 // import markdownContent from "@/content/blogs/nft-marketplace-in-react-js-next-typescript-full-guide.md";
@@ -18,6 +19,14 @@ import { StaticImageData } from "next/image";
 import { time } from "console";
 
 export const blogsData = [
+  {
+    title: "100 Preguntas de JavaScript",
+    time: "2024-10-16",
+    description:
+      "❤️ De básico a avanzado: prueba tus conocimientos en JavaScript y prepárate para entrevistas técnicas. Preguntas y respuestas actualizadas regularmente. ¡Solo por diversión, buena suerte!",
+    imageUrl: js,
+    // markdown: content,
+  },
   {
     title: "Transformers para LLM",
     time: "2024-10-09",
