@@ -7,7 +7,7 @@ import { Youtube } from "@/components/blogs/youtube";
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <div className="relative h-10 w-10 !mb-0">
-                <Image
+                <img
                   className="rounded-full"
                   src="/images/ElvisProfile.jpeg"
                   alt=""
@@ -28,25 +28,42 @@ import { Youtube } from "@/components/blogs/youtube";
         </div>
       </div>
 
-# Transformer: la tecnologia que esta transformando el mundo
+<div className="flex items-center justify-center ">
+  <img
+    src="/markdown/transformers/fig0.webp"
+    alt="Visión general de RT-DETR de Baidu"
+    priority={true}
+    width={900}
+    height={300}
+  />
+</div>
+# Que son los Transformers
 
 <div className="mt-4"></div>
-La primera vez que leí el paper de Google, *Attention Is All You Need*, me
-pareció muy complicado. Hoy te traigo una explicación sencilla para entenderlo,
-y revisaremos paso a paso su arquitectura. Así, podrás comprender a fondo cómo
-funciona y aplicarlo en tus propios proyectos.
+Los Transformers son un tipo de modelo de inteligencia artificial diseñado para
+procesar y entender secuencias de datos, como el lenguaje o el texto. Fueron
+creados para ayudar a las máquinas a comprender mejor las relaciones entre
+palabras en una oración o incluso en textos largos.
 
-## Qué es un Transformer
+# Son la tecnologia que esta transformando el mundo
+
+<div className="mt-4"></div>
+Antes de continuar , si esta interesado en leer previamente el paper y
+entenderlo por tu cuenta te dejo el link:
+<div className="mt-4"></div>
+
+<a href="https://arxiv.org/pdf/1706.03762">Attention Is All You Need</a>
+<div className="mt-4"></div>
+
+La primera vez que leí el paper de
+Google, _Attention Is All You Need_, me pareció muy complicado. Te traigo una
+explicación sencilla para entenderlo
 
 <div className="mt-4"></div>
 
 <div className="mt-4"></div>
 
-«El Transformer es el primer modelo de _transducción_ que se basa completamente en la auto-atención para calcular representaciones de su entrada y salida, sin utilizar RNN alineados en secuencia o convoluciones.»
-
-<div className="mt-4"></div>
-
-_Attention Is All You Need._
+El Transformer es el primer modelo de _transducción_ que se basa completamente en la auto-atención para calcular representaciones de su entrada y salida, sin utilizar RNN alineados en secuencia o convoluciones.
 
 <div className="mt-10"></div>
 
@@ -55,7 +72,7 @@ La idea clave del Transformer es gestionar completamente las dependencias entre 
 <div className="mt-4"></div>
 
 <div className="flex items-center justify-center ">
-  <Image
+  <img
     src="/markdown/transformers/fig1.webp"
     alt="Visión general de RT-DETR de Baidu"
     priority={true}
@@ -68,12 +85,16 @@ La idea clave del Transformer es gestionar completamente las dependencias entre 
 ## Revisando la arquitectura de un Transformer
 <div className="mt-4"></div>
 
-El Transformer utiliza un Encoder y un Decoder como sus componentes principales. El Encoder se encarga de procesar el contexto de la secuencia de entrada, mientras que el Decoder genera la secuencia de salida a partir de ese contexto. En la animación de abajo, puedes observar cómo funciona este proceso en una tarea de traducción de texto
+El Transformer utiliza un Encoder y un Decoder como sus componentes principales.
+
+El Encoder se encarga de procesar el contexto de la secuencia de entrada, mientras que el Decoder genera la secuencia de salida a partir de ese contexto.
+
+En la animación de abajo, puedes observar cómo funciona este proceso en una tarea de traducción de texto
 
 <div className="mt-4"></div>
 
 <div className="flex items-center justify-center ">
-  <Image
+  <img
     src="/markdown/transformers/fig2.webp"
     alt="Visión general de RT-DETR de Baidu"
     priority={true}
@@ -83,12 +104,12 @@ El Transformer utiliza un Encoder y un Decoder como sus componentes principales.
 </div>
 <div className="mt-4"></div>
 
-En la figura del paper se ve claramente esa diferencia
+En la figura del paper _Attention Is All You Need_ se ve claramente esa diferencia entre esos 2 bloques
 
 <div className="mt-4"></div>
 
 <div className="flex items-center justify-center ">
-  <Image
+  <img
     src="/markdown/transformers/fig3.webp"
     alt="Visión general de RT-DETR de Baidu"
     priority={true}
@@ -104,7 +125,7 @@ En NLP, el Embedding se refiere a convertir las palabras en vectores. Lo interes
 
 <div className="mt-4"></div>
 <div className="flex items-center justify-center ">
-  <Image
+  <img
     src="/markdown/transformers/fig4.webp"
     alt="Visión general de RT-DETR de Baidu"
     priority={true}
@@ -114,6 +135,7 @@ En NLP, el Embedding se refiere a convertir las palabras en vectores. Lo interes
 </div>
 
 <div className="mt-4"></div>
+
 ## La Posicion de las palabras
 
 <div className="mt-4"></div>
@@ -122,14 +144,14 @@ La posición de una palabra es crucial para que el modelo pueda interpretar corr
 
 <div className="mt-4"></div>
 
-En las RNN, la arquitectura recurrente asegura que el orden de las palabras sea importante. Sin embargo, el Transformer abandona este mecanismo recurrente en favor del «mecanismo de atención múltiple», lo que teóricamente permite captar dependencias a largo plazo de manera más eficiente y acelerar el proceso de entrenamiento.
+En las RNN, la arquitectura recurrente asegura que el orden de las palabras sea importante. Sin embargo, el Transformer abandona este mecanismo recurrente en favor del _mecanismo de atención múltiple_, lo que teóricamente permite captar dependencias a largo plazo de manera más eficiente y acelerar el proceso de entrenamiento.
 
 <div className="mt-4"></div>
 
 <div className="mt-4"></div>
 
 <div className="flex items-center justify-center ">
-  <Image
+  <img
     src="/markdown/transformers/fig5.png"
     alt="Visión general de RT-DETR de Baidu"
     priority={true}
@@ -150,11 +172,15 @@ en ese momento.
 <div className="mt-4"></div>
 Supongamos que queremos traducir la siguiente frase:
 <div className="mt-4"></div>
-"Alice and Tom were playing soccer, but she scored the winning goal."
+_"Alice and Tom were playing soccer, but she scored the winning goal."_
 
 <div className="mt-4"></div>
 
-Cuando el modelo está procesando la secuencia, ¿a quién se refiere "she"? Aunque esta puede parecer una pregunta sencilla para una persona, representa un problema complejo en el procesamiento del lenguaje natural (NLP). El mecanismo de autoatención permite asociar "she" con Tom en vez de con el resto de las palabras.
+Cuando el modelo está procesando la secuencia, ¿a quién se refiere "she"?
+
+Aunque esta puede parecer una pregunta sencilla para una persona, representa un problema complejo en el procesamiento del lenguaje natural (NLP).
+
+El mecanismo de autoatención permite asociar "she" con Tom en vez de con el resto de las palabras.
 
 <div className="mt-4"></div>
 
@@ -165,6 +191,16 @@ Aunque las RNN (redes neuronales recurrentes) pueden referenciar palabras anteri
 El mecanismo de autoatención soluciona este problema, ya que, en teoría, tiene una ventana de referencia infinita, limitada solo por la potencia computacional. Esto permite que el algoritmo use el contexto completo para realizar la tarea.
 
 <div className="mt-4"></div>
+<div className="flex items-center justify-center ">
+  <img
+    src="/markdown/transformers/fig5.1.png"
+    alt="Visión general de RT-DETR de Baidu"
+    priority={true}
+    width={500}
+    height={300}
+  />
+</div>
+<div className="mt-10"></div>
 
 En un Transformer, el texto fluye de manera simultánea entre el encoder y el decoder. Por lo tanto, es fundamental añadir información sobre la posición de cada palabra en el vector de secuencia. Los autores del paper decidieron aplicar una función sinusoidal para este propósito. No entraré en muchos detalles sobre esto, ya que se sale del alcance de este post.
 
@@ -175,7 +211,7 @@ En un Transformer, el texto fluye de manera simultánea entre el encoder y el de
 <div className="mt-4"></div>
 
 <div className="flex items-center justify-center ">
-  <Image
+  <img
     src="/markdown/transformers/fig6.png"
     alt="Visión general de RT-DETR de Baidu"
     priority={true}
@@ -183,8 +219,9 @@ En un Transformer, el texto fluye de manera simultánea entre el encoder y el de
     height={300}
   />
 </div>
+<div className="mt-4"></div>
 
-Para poder entender el mecanismo complejo de multi-cabezas, primero es necesario entender lo simple. El producto escalar.
+Para poder entender el mecanismo complejo de multi-cabezas
 
 <div className="mt-4"></div>
 
@@ -197,12 +234,12 @@ El mecanismo toma 3 valores de entrada:
 3. V: el valor vectorial de la palabra que se procesa en dicho punto temporal.
    <div className="mt-4"></div>
 
-En el caso de auto-atención, los valores V y Q son el mismo vector. Y por lo tanto, el mecanismo nos devuelve la importancia de la palabra en el texto:
+Los valores V y Q son el mismo vector.El mecanismo nos devuelve la importancia de la palabra en el texto:
 
 <div className="mt-4"></div>
 
 <div className="flex items-center justify-center ">
-  <Image
+  <img
     src="/markdown/transformers/fig7.png"
     alt="Visión general de RT-DETR de Baidu"
     priority={true}
@@ -214,6 +251,17 @@ En el caso de auto-atención, los valores V y Q son el mismo vector. Y por lo ta
 
 Realizar el producto escalar de Q y K (transpuesto) significa calcular la proyección ortogonal de Q en K. O sea, intentar estimar la alineación de los vectores y devolver un peso para cada palabra del texto.
 
+<div className="mt-4"></div>
+
+<div className="flex items-center justify-center ">
+  <img
+    src="/markdown/transformers/fig7.5.png"
+    alt="Visión general de RT-DETR de Baidu"
+    priority={true}
+    width={300}
+    height={300}
+  />
+</div>
 <div className="mt-4"></div>
 
 Se normaliza el resultado al dividir por la raíz del tamaño de K (o sea, por el tamaño de la secuencia). Esto se hace para evitar problemas de fuga de gradiente que se producirían en la Softmax si tenemos valores de gran tamaño. Aplicar la softmax se debe a intentar escalar el peso de la palabra en un rango entre 0 y 1. Finalmente, se multiplican estos pesos por el valor (el vector de la palabra con la que estamos trabajando) para reducir la importancia de palabras no relevantes y quedarnos solo con las que nos importan.
@@ -228,74 +276,108 @@ La versión del mecanismo que utiliza un Transformer es una proyección de Q, K 
 
 <div className="mt-4"></div>
 
-La arquitectura de multi-cabeza es la leche. Nos permite aprender dependencias mucho más complejas sin añadir tiempo de entrenamiento gracias a que la proyección lineal reduce el tamaño de cada vector. (En el paper presentado usan 8 proyecciones en subespacio de dimensión 64).
+La arquitectura de multi-cabeza nos permite aprender dependencias mucho más complejas sin añadir tiempo de entrenamiento gracias a que la proyección lineal reduce el tamaño de cada vector.
 
 <div className="mt-4"></div>
 
-## Juntamos las piezas: ¿Cómo funciona la arquitectura encoder-decoder?
+## Arquitectura encoder-decoder
 
 <div className="mt-4"></div>
 <div className="flex items-center justify-center ">
-  <Image
-    src="/markdown/transformers/fig8.webp"
+  <img
+    src="/markdown/transformers/fig8.1.jpg"
     alt="Visión general de RT-DETR de Baidu"
     priority={true}
-    width={700}
+    width={300}
     height={300}
-  />
+/>
+
 </div>
 
 <div className="mt-4"></div>
 
-## La codificación
+## La Codificación
 
 <div className="mt-4"></div>
 Se realiza un embedding de la secuencia de las palabras para convertir cada una
-en un vector y tener una representación numérica. Añadir la componente
-posicional para cada vector de palabra. Aplicar el mecanismo de auto-atención de
-múltiples cabezas. Capa neuronal Feed Forward.
+en un vector y tener una representación numérica.
+<div className="mt-4"></div>
+
+Añadir la componente
 
 <div className="mt-4"></div>
 
-## La decodificación
+posicional para cada vector de palabra.
+
+<div className="mt-4"></div>
+
+Aplicar el mecanismo de auto-atención de múltiples cabezas.
+
+<div className="mt-4"></div>
+
+Capa neuronal Feed Forward.
+
+<div className="mt-4"></div>
+
+## La Decodificación
 
 <div className="mt-4"></div>
 
 Se realiza un embedding del resultado del punto temporal justo anterior (t-1).
+
+<div className="mt-4"></div>
+
 Se añade la componente posicional.
+
+<div className="mt-4"></div>
+
 Se aplica el mecanismo de auto-atención de múltiples cabezas a la secuencia del output de t-1.
+
+<div className="mt-4"></div>
+
 Se recoge la salida del encoder para el punto temporal t, aplicamos de nuevo el mecanismo de auto-atención, esta vez utilizando las palabras del output t-1 como V, y la salida del encoder (en t) como K y Q.
+
+<div className="mt-4"></div>
+
 Capa neuronal de Feed Forward.
-Finalizamos con una capa lineal y una Softmax para obtener la probabilidad de la siguiente palabra y devolver aquella con la probabilidad más alta como la siguiente palabra.
 
 <div className="mt-4"></div>
 
-## Resultados que hacen que los Transformer sean estado del arte
+Capa lineal y una Softmax para obtener la probabilidad de la siguiente palabra y devolver aquella con la probabilidad más alta como la siguiente palabra.
 
 <div className="mt-4"></div>
-Los autores compararon los resultados de la arquitectura con otras soluciones
-consideradas estado del arte en 2017. La arquitectura Transformer adelanta por
-la derecha a todos. Os adjunto los resultados para una tarea de traducción:
+
+## Resultados
 
 <div className="mt-4"></div>
 
 <div className="flex items-center justify-center ">
-  <Image
+  <img
     src="/markdown/transformers/fig9.png"
     alt="Visión general de RT-DETR de Baidu"
     priority={true}
-    width={700}
+    width={500}
     height={300}
   />
 </div>
 <div className="mt-4"></div>
-
+Este cuadro muestra que los modelos basados en transformers logran una buena combinación
+de alta calidad de traducción (BLEU alto) y un costo de entrenamiento relativamente
+bajo (menores FLOPs), especialmente comparado con modelos más antiguos o más complejos.
 ## Conclusiones
+<div className="mt-4"></div>
 
 <div className="mt-4"></div>
 
-La publicación del paper «Attention is all you need» fue una revolución en el campo de NLP. Solventan los problemas de memoria que presentan las RNN
+La publicación del paper <strong>_Attention is all you need_</strong> de google, fue una revolución en el campo de NLP.
+
+<div className="mt-4"></div>
+Los Transformers solventan los problemas de memoria que presentan las RNN
 
 <div className="mt-4"></div>
 
 La clave de la arquitectura es el mecanismo de auto-atención y el uso de autoencoders para agilizar el entrenamiento y producir resultados top son la base del uso de GPT.
+
+<div className="mt-4"></div>
+Los transformers son la base de los GPT y los grandes modelos de LLM y de los
+modelos de visión modernos
